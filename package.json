@@ -1,0 +1,35 @@
+{
+  "name": "youtube-tv-client",
+  "version": "1.0.0",
+  "description": "YouTube client that uses the TV interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.haroon01.youtubetvclient",
+    "productName": "YouTubeTV",
+    "files": [
+      "index.js",
+      "package.json"
+    ],
+    "win": {
+      "target": ["portable"],
+      "icon": "img/icon/yt.ico"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "icon": "img/icon/yt.png",
+      "category": "Utility"
+    }
+  },
+  "keywords": [],
+  "author": "Haroon01",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-builder": "^24.13.3"
+  }
+}
