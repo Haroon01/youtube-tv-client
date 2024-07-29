@@ -17,11 +17,13 @@
     ],
     "win": {
       "target": ["portable"],
-      "icon": "img/icon/yt.ico"
+      "icon": "img/icon/youtube.ico",
+      "artifactName": "${productName}_v${version}_x64_win.${ext}"
     },
     "linux": {
       "target": ["AppImage"],
-      "icon": "img/icon/yt.png",
+      "icon": "img/icon/youtube.png",
+      "artifactName": "${productName}_v${version}_linux.${ext}",
       "category": "Utility"
     }
   },
