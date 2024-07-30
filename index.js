@@ -13,8 +13,12 @@ function createWindow() {
     win.setMenu(null);
 
     win.loadURL('https://youtube.com/tv', {
-        // PS5 user agent for the TV interface. 
-        userAgent: 'Mozilla/5.0 (PlayStation; PlayStation 5/6.02) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15'
+        userAgent: 'Mozilla/5.0 (PS4; Leanback Shell) Gecko/20100101 Firefox/65.0 LeanbackShell/01.00.01.75 Sony PS4/ (PS4, , no, CH)'
+    });
+
+    // setting zoom 50% to enable higher resolutions. has no effect on the applications UI.
+    win.webContents.on('did-finish-load', () => {
+        win.webContents.setZoomFactor(0.5);
     });
 }
 
