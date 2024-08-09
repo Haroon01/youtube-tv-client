@@ -11,17 +11,24 @@
   "build": {
     "appId": "com.haroon01.youtubetvclient",
     "productName": "YouTubeTV",
+    "electronDownload": {
+      "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
+    },
     "files": [
       "index.js",
       "package.json"
     ],
     "win": {
-      "target": ["portable"],
+      "target": [
+        "portable"
+      ],
       "icon": "img/icon/youtube.ico",
       "artifactName": "${productName}_v${version}_x64_win.${ext}"
     },
     "linux": {
-      "target": ["AppImage"],
+      "target": [
+        "AppImage"
+      ],
       "icon": "img/icon/youtube.png",
       "artifactName": "${productName}_v${version}_linux.${ext}",
       "category": "Utility"
@@ -31,7 +38,7 @@
   "author": "Haroon01",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^31.3.0",
+    "electron": "github:castlabs/electron-releases#v31.3.1+wvcus",
     "electron-builder": "^24.13.3"
   }
 }
